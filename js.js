@@ -67,14 +67,17 @@ break
 SearchInteger(prompt("write a number"))
 
 // Task3
-let n
-let max=function(){
-for (let i=0;i<arguments.length;i++)
-if(arguments[i]>=arguments[i-1]){n=arguments[i]}
-else{continue}
+let n=-Infinity
+let max=function(){  
+for (let i=0;i<(arguments.length-1);i++){
+if(n>=arguments[i+1])
+continue
+else {n=arguments[i+1]}
+}
 return n
 }
-console.log(max(8,9,3,11,0,-9))
+console.log(max(8,9,3,-7,11,0,-9))
+
 
 // task 4
 let password=5
